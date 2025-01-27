@@ -12,13 +12,13 @@ const HeroData = [
     title: "Wireless",
     title2: "Headphone",
   },
-
   {
     id: 2,
     img: Image2,
     subtitle: "Beats Solo",
     title: "Wireless",
-    title2: "Virtual",
+    title2: "Virtual"
+    
   },
 
   {
@@ -59,7 +59,7 @@ const Hero = () => {
                   <h1 className="text-2xl sm:text-6xl lg:text-2xl font-bold">{data.subtitle}</h1>
                   <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold">{data.title}</h1>
                   <h1 className="text-5xl uppercase text-white dark:text-white/5
-                  sm:text-[80px] md:text-[100px] xl:text-[150] font-bold">{data.title2}</h1>
+                  sm:text-[80px] md:text-[100px] xl:text-[150px] font-bold">{data.title2}</h1>
                   <div>
                     <Button
                     text="Shop By Categories"

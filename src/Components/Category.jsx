@@ -14,8 +14,8 @@ const Category = () => {
     <div className="mb-4">
       <p className="mb-[2px] text-gray-400"> Enjoy </p>
       <p className="text-2xl font-semibold mb-[2px]"> With</p>
-      <p className="text-4xl xl:text-5xl font-semibold opacity-20
-      mb-2"> Earphone </p>
+      <p className="text-2xl xl:text-5xl font-semibold opacity-20
+      mb-2">Earphones</p>
       <Button
       text="Browse"
       bgColor={"bg-primary"}
@@ -23,7 +23,7 @@ const Category = () => {
     </div>
   </div>
   <img src={Image1} alt="" className="w-[180px] absolute
-  bottom-0 ml-[30px] mb-[20px]" />
+  bottom-0 ml-[15px] mb-[20px]" />
 </div>
 {/* Second column */}
 <div className="py-10 pl-5 bg-gradient-to-br from-brandyellow to to-brandyellow/70 text-white rounded-3xl relative h-[320px] flex items-end">
@@ -32,7 +32,7 @@ const Category = () => {
       <p className="mb-[2px] text-white"> Enjoy </p>
       <p className="text-2xl font-semibold mb-[2px]"> With</p>
       <p className="text-4xl xl:text-5xl font-semibold opacity-50
-      mb-2"> Gadget </p>
+      mb-2 mr-[10px]"> Wrist <br /> watches </p>
       <Button
       text="Browse"
       bgColor={"bg-white"}
@@ -49,7 +49,7 @@ const Category = () => {
       <p className="mb-[2px] text-white"> Enjoy </p>
       <p className="text-2xl font-semibold mb-[2px]"> With</p>
       <p className="text-4xl xl:text-5xl font-bold opacity-40
-      mb-2"> Laptop </p>
+      mb-2"> Laptops </p>
       <Button
       text="Browse"
       bgColor={"bg-white"}
