@@ -44,7 +44,8 @@ const DropdownLinks = [
     link: "/#",
   },
 ];
-const Navbar = () => {
+// eslint-disable-next-line react/prop-types
+const Navbar = ( {handleOrderPopup} ) => {
   return (
     <div
       className="bg-white dark:bg-gray-900
@@ -91,7 +92,6 @@ hover:text-black dark:hover:text-white duration-200"
                   <div className="absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white shadow-md dark:bg-gray-900 p-2 dark:text-white">
                     <ul className="space-y-2">
                       {DropdownLinks.map((data, index) => (
-                        // eslint-disable-next-line react/jsx-key
                         <li key={index}>
                           <a
                             className="text-gray-500
@@ -123,7 +123,7 @@ absolute top-1/2 -translate-y-1/2 right-3 duration-200
             </div>
 
             {/* order button */}
-            <button className="relative p-3">
+            <button className="relative p-3" onClick={handleOrderPopup}>
               <FaShoppingCart className="text-xl text-gray-600 dark:text-gray-400" />
               <div className="w-4 h-4 bg-red-500 text-white rounded-full absolute top-0 right-0 flex items-center justify-center text-x5">
                 4

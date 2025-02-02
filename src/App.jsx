@@ -6,7 +6,15 @@ import Services from "./Components/Services";
 import Banner from "./Components/Banner/Banner";
 import Headphones from "./assets/Hero/red_headphones-removebg-preview.png";
 import Products from "./Components/Products/Products";
-import Smartwatch from "../src/assets/brand/GoWristGreen2-removebg-preview.png";
+import Smartwatch from "../src/assets/brand/GoWristGreen2-removebg-preview2.png";
+import Blog from "./Components/Blog/Blog";
+import Partners from "./Components/Partners/Partners";
+import Footer from "./Components/Footer/Footer";
+import Popup from "./Components/Popup/Popup";
+import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 
 const BannerData = {
@@ -32,18 +40,41 @@ bgColor: "#2dcc6f",
 };
 
 const App = () => {
+
+const [orderPopup, setOrderPopup] = React.useState(false);
+
+const handleOrderPopup = () => {
+  setOrderPopup(!orderPopup);
+};
+
+React.useEffect(() => {
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-sine',
+    delay: 100,
+    offset: 100,
+  });
+  AOS.refresh();
+}, []);
+
+
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden">
-    <Navbar/>
-    <Hero/>
+    <Navbar handleOrderPopup={handleOrderPopup}/>
+    <Hero handleOrderPopup={handleOrderPopup}/>
     <Category/>
     <Category2/>
     <Services/>
     <Banner data= {BannerData}/>
     <Products/>
     <Banner data= {BannerData2}/>
+    <Blog/>
+    <Partners/>
+    <Footer/>
+    <Popup orderPopup={orderPopup}
+    handleOrderPopup={handleOrderPopup}/>
     </div>
   )
 }
 
-export default App
+export default App;
