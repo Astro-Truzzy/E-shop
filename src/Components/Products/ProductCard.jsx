@@ -1,4 +1,6 @@
+/* eslint-disable react/prop-types */
 import Button from "../Shared/Button"
+
 
 
 const ProductCard = ({ data }) => {
@@ -9,8 +11,11 @@ const ProductCard = ({ data }) => {
         {/* card section */}
         {data.map((data) => (
           // eslint-disable-next-line react/jsx-key, react/prop-types
-          <div className="group" key={data.id}>
-            <div className=" relative space-y-3">
+          <div
+          data-aos="fade-up"
+            data-aos-delay={data.aosDelay}
+          className="group" key={data.id}>
+            <div className="relative bg-gradient-to-r from-gray-200/50 to-gray-300">
               <img src={data.img} alt="" 
               className="h-[180px] w-[260px] object-contain rounded-md"/>
               {/* Hover button */}

@@ -12,6 +12,7 @@ const BlogData = [
       "Discover the latest Beats Solo 3 headphones with exclusive features and benefits.",
     published: "Jan 20, 2025 by Williams",
     image: Img1,
+    aosDelay:"0",
   },
 
   {
@@ -20,6 +21,7 @@ const BlogData = [
       "Discover the latest Beats Solo 3 headphones with exclusive features and benefits.",
     published: "Jan 20, 2025 by Taresy",
     image: Img2,
+    aosDelay:"200",
   },
 
   {
@@ -28,6 +30,7 @@ const BlogData = [
       "Discover the latest Beats Solo 3 headphones with exclusive features and benefits.",
     published: "Jan 20, 2025 by Eloghosa",
     image: Img3,
+    aosDelay:"400",
   },
 ];
 
@@ -45,7 +48,10 @@ const Blog = () => {
         >
           {/* Blog card */}
           {BlogData.map((data) => (
-            <div key={data.index} className="bg-white dark:bg-gray-900">
+            <div
+            data-aos="fade-up"
+            data-aos-delay={data.aosDelay}
+            key={data.index} className="bg-white dark:bg-gray-900">
               {/* Image section */}
               <div className="overflow-hidden rounded-2xl
               mb-2">

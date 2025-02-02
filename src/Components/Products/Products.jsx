@@ -86,7 +86,7 @@ const Products = () => {
     <div>
       <div className="container">
         {/* Header section */}
-        <Heading title="Our Products" subtitle={"Explore Our Products"} />
+        <Heading title="Best Seller Products" subtitle={"Explore Our Products"} />
 
         {/* Body section */}
         <ProductCard data={ProductsData} />
