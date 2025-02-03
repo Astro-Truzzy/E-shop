@@ -15,7 +15,7 @@ const ProductCard = ({ data }) => {
           data-aos="fade-up"
             data-aos-delay={data.aosDelay}
           className="group" key={data.id}>
-            <div className="relative bg-gradient-to-r from-gray-200/50 to-gray-300">
+            <div className="relative bg-gradient-to-r from-gray-100 to-gray-200 dark:bg-gradient-to-r dark:from-gray-800 dark:to-gray-900">
               <img src={data.img} alt="" 
               className="h-[180px] w-[260px] object-contain rounded-md"/>
               {/* Hover button */}

@@ -14,6 +14,7 @@ import Popup from "./Components/Popup/Popup";
 import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ScrollToTop from "./Components/Movetotop/ScrollToTop";
 
 
 
@@ -73,6 +74,7 @@ React.useEffect(() => {
     <Footer/>
     <Popup orderPopup={orderPopup}
     handleOrderPopup={handleOrderPopup}/>
+    <ScrollToTop/>
     </div>
   )
 }
